@@ -25,6 +25,30 @@ nombre = "bill"
 console.log(nombre[0])
 
 nombre = "feDErICo"
-nombre = nombre.toLowerCase()
 
-console.log(nombre)
+// nombre = nombre.toLowerCase()
+
+console.log(nombre.charAt(0))
+console.log(nombre[0])
+// slice corta desde la posicion indicada hasta la indicada, en caso de no indicar el segundo parametro va hasta el final
+console.log(nombre.slice(1))
+nombreBien = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase()
+console.log(nombreBien)
+
+let nombreCompleto = "      Pérez González, María       "
+let nombreSinEspacios = nombreCompleto.trim()
+console.log(nombreSinEspacios)
+
+let nombreArreglado = nombreSinEspacios.split(", ")
+
+nombreArreglado = nombreArreglado[1] + " " + nombreArreglado[0]
+console.log(nombreArreglado)
+
+
+let fecha = "2023/11/8"
+// Obtener hoy es 8 del 11 del 2023
+let fechaCortada = fecha.split("/")
+console.log(fechaCortada)
+let mensaje1 = `Hoy es ${fechaCortada[2]} del ${fechaCortada[1]} del ${fechaCortada[0]}`
+
+console.log(mensaje1)

@@ -1,12 +1,12 @@
-let edad = prompt("Que edad tienes??")
-
-let respuesta = ""
-if (edad < 18) {
-    respuesta = `Como tienes ${edad} eres menor de edad`  
+// Preguntar la edad
+let edad = prompt("¿Qué edad tienes??")
+alert(typeof(edad))
+if ((edad == null) || (edad == "" || isNaN(edad))) {
+    alert("Debes introducir una edad valida")
 } else {
-    respuesta = `Como tienes ${edad} eres mayor de edad`
+    if (edad < 18) {
+        alert(`Como tienes ${edad}\neres menor de edad`)  
+    } else {
+        alert(`Como tienes ${edad}\neres mayor de edad`)
+    }
 }
-
-alert(respuesta)
-
-document.getElementById("edad").innerText = respuesta
