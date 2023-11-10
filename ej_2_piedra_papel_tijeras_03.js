@@ -3,15 +3,17 @@ let nombre =""
 
 let nombre_correcto = true
 do {
-    nombre = prompt("¿Cual es tu nombre?")
-    if (nombre.trim().length > 0 || nombre != null)
-    nombre_correcto = false
+    
+    nombre = prompt("¿Cual es tu nombre?\nDebes escribir al menos 3 caracteres")
 
+    if (nombre != null && nombre.trim().length > 0){
+    nombre_correcto = false;
+    break
+    }
 
 } while (nombre_correcto) {
 
    
-
     alert(`Bienvenido ${nombre}`)
 
     mensaje = (`
@@ -35,6 +37,7 @@ do {
     let jugada_pc = getRandomInt(1, 4)
 
     let resolucion_partida = ""
+    let final = `${nombre} Partida finalizada\nAdios!!!`
 
     if (jugada_humano == 1 || jugada_humano == 2 || jugada_humano == 3) {
 
@@ -65,9 +68,10 @@ do {
         }
 
         alert(resolucion_partida)
+        alert(final)
 
     } else {
-        alert(`${nombre} Eres un gilipollas\nAdios!!!`)
+        alert(`Eres un gilipollas\n`+ final)
     }
 
 }
