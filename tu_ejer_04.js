@@ -4,26 +4,15 @@
 // En este ejercicio nuestro objetivo será invertir un
 // texto, como si se mirara en un espejo
 
-let texto = "ana"
-let textoNuevo = ""
+let texto = "Dabale arroz a la zorra el abad"
 
-function invertirTexto(tex) {
+
+export function invertirTexto(tex) {
+    let textoInverso = ""
+    let textoNuevo = ""
     for (let i = tex.length - 1; i >= 0; i--)
-        textoNuevo += tex[i]
-    return textoNuevo
+        textoInverso = textoNuevo += tex[i]
+    return textoInverso
 }
 
 console.log(invertirTexto(texto))
-
-
-// controlar desde aqui para que sea palindromo
-console.log(invertirTexto("hola"));
-
-    if (invertirTexto(texto).toLowerCase() == texto.toLowerCase()) {
-        resultado ="El texto es palindromo"
-    } else {
-        resultado ="No es palindromo"
-    }
-console.log(resultado)
-console.log(texto.toLowerCase());
-console.log(invertirTexto(texto));
