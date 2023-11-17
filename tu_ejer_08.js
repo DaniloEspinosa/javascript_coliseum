@@ -174,11 +174,11 @@ console.log(textoMasCortoOListado(arrayNombres2));
 
 
 function longitudNombres(lista) {
-let longitudNombres = []
-for (i = 0; i < lista.length; i++) {
-    longitudNombres.push(lista[i].length)
-}
-return longitudNombres
+    let longitudNombres = []
+    for (i = 0; i < lista.length; i++) {
+        longitudNombres.push(lista[i].length)
+    }
+    return longitudNombres
 }
 
 console.log(longitudNombres(arrayNombres1));
@@ -186,12 +186,32 @@ console.log(longitudNombres(arrayNombres2));
 
 // 8) Crea un array llamado arrayNombresConI que incluya solo los nombres que contengan la letra i
 
-let arrayNombresConI = []
+// let arrayNombresConI = []
+// let palabraIncluida = "i"
+// for (let i = 0; i < arrayNombres1.length; i++) {
+//   if (arrayNombres1[i].includes(palabraIncluida) == true) {
+//     arrayNombresConI.push(arrayNombres1[i])
+//   }
+// }
+// console.log(arrayNombresConI);
 
-for (i = 0; i < arrayNombres1.length; i++) {
-
+function nombresConCaracter(lista, caracter) {
+    let arrayNombresConI = []
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i].includes(caracter) == true) {
+            arrayNombresConI.push(lista[i])
+        }
+    }
+    return arrayNombresConI
 }
+console.log(nombresConCaracter(arrayNombres1, "i"));
 
 
+// Dado este array:
+// let arrayMixto = [ "Marie", 24, "Pol", 18, "Judith", 22, "Eva", 28 ]
+// o cualquier otro array con una estructura similar
 
-console.log(letra in nombre);
+// 9) Debes obtener otro array llamado arrayBidimensional que sea así:
+// [ ["Marie", 24 ], ["Pol", 18], ["Judith", 22 ], [ "Eva", 28] ]
+
+let arrayMixto = [ "Marie", 24, "Pol", 18, "Judith", 22, "Eva", 28 ]
