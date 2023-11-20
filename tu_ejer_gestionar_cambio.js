@@ -24,104 +24,42 @@ Devolución:
 1 moneda de 0.05€
 */
 
-let precio = 1025.35
-let montoIngresado = 2000
-let vuelto = montoIngresado - precio
+let precio = prompt(`Por favor ingrese el precio del artículo`);
+let montoIngresado = prompt(`Por favor ingrese el monto con el que pagara el articulo`);
+let vuelto = montoIngresado - precio;
 
+// Declarar los arrays que contienen los valores de los billetes y las monedas
+const billetes = [500, 200, 100, 50, 20, 10, 5];
+const monedas = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
 
-// DESPUES RESOLVER CON BUCLE FOR O WHILE
-const billetes = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
-let billete500 = 500
-let billete200 = 200
-let billete100 = 100
-let billete50 = 50
-let billete20 = 20
-let billete10 = 10
-let billete5 = 5
-let moneda2 = 2
-let moneda1 = 1
-let moneda050 = 0.50
-let moneda020 = 0.20
-let moneda010 = 0.10
-let moneda005 = 0.05
-let moneda002 = 0.02
-let moneda001 = 0.01
-
-let devolucion = []
+let devolucion = [];
+let palabra = ``;
 for (let i = 0; i < billetes.length; i++) {
-    if (vuelto > billetes[i]) {
-        devolucion.push(Math.floor(vuelto / billetes[i]))
-        vuelto = vuelto % billetes[i]
+  if (vuelto > billetes[i]) {
+    let cantidad = Math.floor(vuelto / billetes[i]);
+    if (cantidad > 1) {
+      palabra = `billetes`;
+    } else {
+      palabra = `billete`;
     }
+    let linea = `\n${cantidad} ${palabra} de ${billetes[i]}`;
+    devolucion.push(linea);
+    vuelto = vuelto % billetes[i];
+  }
 }
-console.log(devolucion);
+for (let i = 0; i < monedas.length; i++) {  
+  if (vuelto > monedas[i]) {
+    let cantidad = Math.floor(vuelto / monedas[i]);
+    if (cantidad > 1) {
+      palabra = `monedas`;
+    } else {
+      palabra = `moneda`;
+    }
+    let linea = `\n${cantidad} ${palabra} de ${monedas[i]}`;
+    devolucion.push(linea);
+    vuelto = vuelto % monedas[i];
+  }
+}
 
-
-// function cambio(vuelto) {
-//     let devolucion = []
-//     if (vuelto > 500) {
-//         devolucion.push(Math.floor(vuelto / 500))
-//         vuelto = vuelto % 500
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-//     if (vuelto > 100) {
-//         devolucion.push(Math.floor(vuelto / 100))
-//         vuelto = vuelto % 100
-//     }
-//     if (vuelto > 50) {
-//         devolucion.push(Math.floor(vuelto / 50))
-//         vuelto = vuelto % 50
-//     }
-//     if (vuelto > 20) {
-//         devolucion.push(Math.floor(vuelto / 20))
-//         vuelto = vuelto % 20
-//     }
-//     if (vuelto > 10) {
-//         devolucion.push(Math.floor(vuelto / 10))
-//         vuelto = vuelto % 10
-//     }
-//     if (vuelto > 5) {
-//         devolucion.push(Math.floor(vuelto / 5))
-//         vuelto = vuelto % 5
-//     }
-//     if (vuelto > 2) {
-//         devolucion.push(Math.floor(vuelto / 2))
-//         vuelto = vuelto % 2
-//     }
-//     if (vuelto > 1) {
-//         devolucion.push(Math.floor(vuelto / 1))
-//         vuelto = vuelto % 1
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-//     if (vuelto > 500) {
-//         devolucion.push(Math.floor(vuelto / 500))
-//         vuelto = vuelto % 500
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-//     if (vuelto > 200) {
-//         devolucion.push(Math.floor(vuelto / 200))
-//         vuelto = vuelto % 200
-//     }
-
-//     return devolucion
-// }
-
-// console.log(cambio(2800
-// ));
+document.getElementById("devolucion").innerText = "Devolucion:"
+document.getElementById("mostrar_pantalla").innerText = devolucion

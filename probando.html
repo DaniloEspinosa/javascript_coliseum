@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
 </head>
+
 <body>
     <h1>JAVASCRIPT</h1>
     <h2>Gestionar cambio</h2>
-    <div id="ventana"></div>
-    <p id="js_1"></p>
+    <form action="#">
+        <div id="ventana">
+            <p id="precio_articulo">Ingrese el precio del articulo<br><input type="number" placeholder="Escriba aquí">
+            </p>
+            <p id="monto_ingresado">Ingresar el monto con el que pagará<br><input type="number"
+                    placeholder="Escriba aquí"></p>
+        </div>
+        <button id="enviar_devolucion" onclick="return hola()">enviar</button>
+    </form>
+    <p id="solicitud"></p>
+
     <p id="edad"></p>
     <p id="devolucion"></p>
     <p id="mostrar_pantalla"></p>
-    
+
     <!-- <script src="10_if.js"></script>
 
     <script src="05_ventanas.js"></script>
     <script src="ejercicio.js"></script>
     <script src="ej_2_piedra_papel_tijeras_04.js"></script>
     <script src="tu_ejer_04.js"></script> -->
-<script src="tu_ejer_gestionar_cambio.js"></script>
+    <script type="module" src="tu_ejer_gestionar_cambio2.js"></script>
 </body>
+
 </html>
