@@ -1,0 +1,56 @@
+public static void main(String[] args) {
+        String saludo;
+        saludo = "Buenas tardes";
+        //System.out.println(saludo.charAt(0));
+        char letra = 'A';
+        /*Enteros*/
+        byte entero_baby = -128;
+        short entero_medio = 32767;
+        int entero = 12;
+        long entero_grande = 115155;
+        /*Decimales*/
+        double decimal1 = 12.5;
+        float decimal2 = 12.3f;
+        //System.out.println(entero);
+        //System.out.println(decimal2 + decimal1);
+        
+        Scanner mensaje = new Scanner(System.in);
+        
+        /*
+        System.out.println("Escribe tu nombre");
+        String nombre = mensaje.nextLine();
+
+        System.out.println("Escribe tu Apellido");
+        String apellido = mensaje.nextLine();
+        
+        System.out.println("¿Te gusta la pizza? Responde si o no?");
+        String respuesta = mensaje.nextLine();        
+        
+        System.out.println("Te llamas " + nombre + " " + apellido + ".");
+        //System.out.println("Me has dicho que " + respuesta + " te gusta la pizza");
+        
+        if (respuesta.equalsIgnoreCase("no")){
+            System.out.println("¿Como que no te gusta la pizza?");
+        } else {
+            System.out.println("Cuando me invitas a una, yo pago las cervezas!!");
+        }*/
+        
+        System.out.println("Dime varios nombres de colores.");
+        System.out.println("Cuantos me vas a decir?");
+        int numColores = mensaje.nextInt();
+        
+        int i;
+        for (i = 0; i < numColores; i++){
+            System.out.println("Que color eliges?");
+            String color = mensaje.nextLine();
+            int aux = i + 1;
+            System.out.println("El color nº " + aux + " es " + color);
+        }
+        
+        System.out.println("La cantidad de colores que has dicho es " + numColores);
+        
+        ArrayList arrayColores = new Arraylist<string>();
+        
+        
+        
+    }
